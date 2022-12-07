@@ -1,10 +1,12 @@
 require "oauth2"
-UID= "u-XXXXXXXXXX"
-SECRET= "s-XXXXXXXX"
+UID= "u-s4t2ud-e492a81de1da8461d6a8a60f4bc8ed68a35c8ea51fff7160062851ced825d279"
+SECRET= "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"
 client = OAuth2::Client.new(UID, SECRET, site: "https://api.intra.42.fr")
 token = client.client_credentials.get_token
-
-response = token.get("/v2/users/" + ARGV[0] + "/locations_stats?begin_at=2022-11-28")
+require 'date'
+d = Date.today
+d.prev_month
+response = token.get("/v2/users/" + ARGV[0] + "/locations_stats?begin_at=2022-" + d +"-28")
 response.status
 # => 200
 response.parsed
