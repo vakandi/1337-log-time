@@ -1,3 +1,4 @@
+[![Build status](https://img.shields.io/github/contributors/wbousfir/github-readme-stats)](https://github.com/leetsec/phase-1/pulls)
 # Dependencies :
 ## ruby > pip3 install requests oauth2 
 ## shell > apt install python3-pip
