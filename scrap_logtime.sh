@@ -12,7 +12,7 @@ else
 	str="$(cat user_timelog.tmp | tr " " "\n" | tr ">" "\n" |sed '/^$/d')"
 	echo "${str#*StringKeyed}" > user_timelog.txt
 	loops="$(cat user_timelog.txt | wc -l)"
-	echo "Number of days you logged in since the 28th November : $loops"
+	echo "Number of days you logged in since the 28th November : $(echo "$loops-1" | bc)"
 	echo "$(cat user_timelog.txt | sed '/^$/d')" > user_timelog.txt
 	echo "\n Calculating all days together.."
 	echo "$(cat user_timelog.txt | sed 's/^.*="//' | rev | cut -c12- | rev)" > list_hours.tmp
