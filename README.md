@@ -1,4 +1,4 @@
-[![Build status](https://img.shields.io/github/contributors/wbousfir/github-readme-stats)](https://github.com/leetsec/phase-1/pulls)
+[![Build status](https://img.shields.io/github/languages/top/vakandi/1337-log-time?color=green&label=shell&logo=github)](https://github.com/vakandi/1337-log-ime/pulls)
 # Dependencies :
 ## ruby > pip3 install requests oauth2 
 ## shell > apt install python3-pip
