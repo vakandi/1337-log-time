@@ -5,8 +5,7 @@ client = OAuth2::Client.new(UID, SECRET, site: "https://api.intra.42.fr")
 token = client.client_credentials.get_token
 require 'date'
 d = Date.today
-d.prev_month
-response = token.get("/v2/users/" + ARGV[0] + "/locations_stats?begin_at=2022-" + d +"-28")
+response = token.get("/v2/users/" + ARGV[0] + "/locations_stats?begin_at=2022-" + d.prev_month.strftime("%m") +"-28")
 response.status
 # => 200
 response.parsed
