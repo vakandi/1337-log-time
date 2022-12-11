@@ -9,6 +9,10 @@ then :
 - ruby-install ruby
 - gem install bundler
 - gem install oauth2
+For Linux, only use:
+- apt install ruby
+- gem install bundler
+- gem install oauth2
 ## Change "UID" & "SECRET" inside .rb file by your own 42 api keys
 ### The script is preconfigured to calculated every day since 28th november, i'll change the config each month
 ### Compatible with Termux (android), MacOs and Linux
