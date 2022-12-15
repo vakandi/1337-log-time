@@ -12,4 +12,4 @@
 - gem install oauth2
 ## Change "UID" & "SECRET" inside .rb file by your own 42 api keys
 ### The script is preconfigured to calculated every day since 28th november, i'll change the config each month
-### Compatible with Termux (android), MacOs and Linux
+### Compatible with Termux (android), MacOs, Linux and WSL (Linux Inside Windows)
