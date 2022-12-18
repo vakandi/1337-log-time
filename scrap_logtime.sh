@@ -32,7 +32,7 @@ else
 	echo "$(echo "$(cat minutes.tmp)" | bc)" > minutes.tmp
 	minutes="$(cat minutes.tmp)"
 	echo "\n"
-	echo "$(printf '%dh:%dm\n' $((minutes%3600/60)) $((minutes%60)))" > minutes.tmp
+	echo "$(printf '%dh:%dm\n' $((minutes/60)) $((minutes%60)))" > minutes.tmp
 	echo "\033[35;m$(date +%B)current log time (by wbousfir):\n\033[0m\033[42;m  $(cat minutes.tmp)  \033[0m"
 fi
 rm user_timelog.tmp
