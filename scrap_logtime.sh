@@ -12,8 +12,8 @@ else
 	str="$(cat user_timelog.tmp | tr " " "\n" | tr ">" "\n" |sed '/^$/d')"
 	echo "${str#*StringKeyed}" > user_timelog.txt
 	loops="$(cat user_timelog.txt | wc -l)"
-	echo "Number of days you logged in since the 28th "$(date -d"1 month ago" "+%B")" : $(echo "$loops-1" | bc)"
-	echo "$(cat user_timelog.txt | sed '/^$/d')" > user_timelog.txt
+	echo "Number of days you logged in since the \033[35;m28th "$(date -d"1 month ago" "+%B")"\033[0m : \033[42;m $(echo "$loops-1" | bc) \033[0m"
+        echo "$(cat user_timelog.txt | sed '/^$/d')" > user_timelog.txt
 	echo "\n Calculating all days together.."
 	echo "$(cat user_timelog.txt | sed 's/^.*="//' | rev | cut -c12- | rev)" > list_hours.tmp
 	#list="1:11 0:13 2:06 1:38 1:36 0:06 0:31 0:33 0:38 0:44"
