@@ -14,7 +14,7 @@
 - gem install oauth2
 ### For MacOS:
 - Install HomeBrew : ```bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
-- (For the cluster, install 42 homebrew https://github.com/kube/42homebrew
+- (For the cluster, install 42 homebrew https://github.com/kube/42homebrew)
 - rbenv install 3.1.2
 - rbenv global 3.1.2
 - If the output of "ruby -v" is not 3.1.2, just do:
