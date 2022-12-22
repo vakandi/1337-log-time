@@ -34,6 +34,7 @@ else
 	echo "\n"
 	echo "$(printf '%dh:%dm\n' $((minutes/60)) $((minutes%60)))" > minutes.tmp
 	echo "\033[35;m$(date +%B)current log time (by wbousfir):\n\033[0m\033[42;m  $(cat minutes.tmp)  \033[0m"
+	echo "\033[35;mLast day with logtime:\n\033[0m\033[35;m  $(cat user_timelog.txt | tail -n 1 | rev | cut -c19- | rev) with this amount of hours: $(cat user_timelog.txt | tail -n1 | sed 's/^.*="//' | rev| cut -c12- | rev)  \033[0m"
 fi
 rm user_timelog.tmp
 rm user_timelog.txt
