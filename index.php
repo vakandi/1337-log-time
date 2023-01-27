@@ -20,7 +20,7 @@ try {                                                                           
     $user = $provider->getResourceOwner($accessToken);
     $request = $provider->getAuthenticatedRequest(
         'GET',
-        'https://api.intra.42.fr/v2/users/' . $_POST["login"] . '/locations_stats',                                                                             $accessToken
+        'https://api.intra.42.fr/v2/users/' . $_POST["login"] . '/locations_stats?begin_at=' . date("Y-m", strtotime("-1 month")) . '-28',                        $accessToken
     );
     $response = $provider->getResponse($request);
     echo "<pre>";
