@@ -38,11 +38,6 @@ if(isset($_POST["login"])) {
     } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
         echo "Error: " . $e->getMessage();
     }
-	$api_output_json = json_decode($response->getBody(), true);                 $daily_hours = array();                                                     foreach ($api_output_json as $date => $time_string) {
-        list($hours, $minutes, $seconds) = explode(':', $time_string);              $daily_hours[$date] = $hours + ($minutes / 60.0) + ($seconds / 3600.0);                                                                             }
-    $total_hours = 0;                                                           foreach ($daily_hours as $date => $hours) {                                     $total_hours += $hours;
-        $minutes = ($hours - floor($hours)) * 60;                                   echo "<p>$date: $hours h and $minutes min</p>";                    
-    	echo "<p>Total hours: $total_hours h</p>";
 }
 ?>
 </body>
