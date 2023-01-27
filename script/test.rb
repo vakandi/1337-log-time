@@ -9,13 +9,7 @@ response = token.get("/v2/users/" + ARGV[0] + "/locations_stats?begin_at=" + d.p
 #The date is updating automatically every month, from 28th of the previous month to 28th on the current one accordly to the Scholarship
 response.status
 
-response.parsed
-#puts response.inspect
-
-require 'json'
-
-# Assuming the API output is stored in a variable called `api_output`
-api_output_json = JSON.parse(response)
+api_output_json = JSON.parse(response.body)
 
 daily_hours = {}
 
@@ -26,15 +20,15 @@ api_output_json.each do |date, time_string|
     daily_hours[date] = hours + (minutes / 60.0) + (seconds / 3600.0)
 end
 
-# Initialize variable to store total hours
-total_hours = 0
-
 # Print out the results
 daily_hours.each do |date, hours|
     puts "#{date}: #{hours} hours"
-    total_hours += hours
 end
 
-# Print out the total hours
+#Calculate total hours 
+total_hours = 0
+daily_hours.each do |date, hours|
+  total_hours += hours
+end
 puts "Total hours: #{total_hours}"
 
