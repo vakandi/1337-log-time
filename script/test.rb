@@ -31,7 +31,7 @@ total_hours = 0
 daily_hours.each do |date, hours|
     total_hours += hours
     minutes = (hours - hours.to_i) * 60
-    puts "#{date}: #{hours.to_i} hours and #{minutes.to_i} minutes"
+   # puts "#{date}: #{hours.to_i} hours and #{minutes.to_i} minutes"
 end
-puts "Total hours: #{total_hours.to_i}"
+puts "Total hours: #{total_hours.to_i} h"
 
