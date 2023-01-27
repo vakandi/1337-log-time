@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>1337 LOGTIME by <a href="https://github.com/vakandi/">wbousfir</a></title>
+  <title>Ruby Script Calculator</title>
 </head>
 <body>
-  <div>
-    <label for="username">Enter your login:</label>
-    <input type="text" id="username" name="username">
-  </div>
-  <br>
-  <button id="calculate-button">Calculate</button>
-  <br>
-  <div id="loading-gif" style="display:none;">
+  <h1>Ruby Script Calculator</h1>
+  <label for="input_field">Enter your input:</label>
+  <input type="text" id="input_field" placeholder="Enter your input here">
+  <button id="calculate_button" onclick="runScript()">Calculate</button>
+  <div id="loading_gif" style="display: none">
     <img src="loading.gif" alt="Loading...">
   </div>
-  <br>
   <div id="output"></div>
-  
   <script>
-    document.getElementById("calculate-button").addEventListener("click", function(){
-      // Get the value of the input field
-      var username = document.getElementById("username").value;
+    function runScript() {
+      // Get the user input from the input field
+      var input = document.getElementById("input_field").value;
       
-      // Show the loading GIF
-      document.getElementById("loading-gif").style.display = "block";
+      // Show the loading gif
+      document.getElementById("loading_gif").style.display = "block";
       
-      // Run the Ruby script with the input field as an argument
-      fetch("calculate-hours.php", {
-        method: "POST",
-        body: JSON.stringify({username: username})
-      })
-      .then(response => response.text())
-      .then(data => {
-        // Hide the loading GIF
-        document.getElementById("loading-gif").style.display = "none";
-        
-        // Display the output
-        document.getElementById("output").innerHTML = data;
-      });
-    });
+      // Run the Ruby script with the user input as an argument
+      fetch("script/get_logtime.rb?input=" + input)
+        .then(response => response.text())
+        .then(data => {
+          // Hide the loading gif
+          document.getElementById("loading_gif").style.display = "none";
+          
+          // Display the output or error message
+          if (data.startsWith("Error")) {
+            document.getElementById("output").innerHTML = "Error: " + data;
+          } else {
+            document.getElementById("output").innerHTML = data;
+          }
+        });
+    }
   </script>
 </body>
 </html>
