@@ -1,9 +1,9 @@
-### [170.187.190.44](http://170.180.190.44) LogTime
-# Run : 
-## ruby script/get_logtime.rb "login"
+### [170.187.190.44](http://170.180.190.44) <br>
+## Using the terminal : 
+### ruby script/get_logtime.rb "login"
 [![Build status](https://img.shields.io/github/languages/top/vakandi/1337-log-time?color=green&label=shell&logo=github)](https://github.com/vakandi/1337-log-ime/pulls)
-# Dependencies :
-## To run on iMac in the cluster's, you'll need to install brew with https://github.com/kube/42homebrew
+## Dependencies :
+### To run on iMac in the cluster's, you'll need to install brew with https://github.com/kube/42homebrew
 ### then : 
 - brew install chruby ruby-install
 - ruby-install ruby
