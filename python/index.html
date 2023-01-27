@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Script</title>
+</head>
+<body>
+    <form action="submit" method="post">
+        <input type="text" name="username" placeholder="Enter username">
+        <input type="submit" value="Submit">
+    </form>
+    {% if total_hours %}
+        <div>Total hours: {{ total_hours }} h</div>
+    {% endif %}
+</body>
+</html>
