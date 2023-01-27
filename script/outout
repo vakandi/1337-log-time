@@ -1,7 +1,0 @@
-no implicit conversion of OAuth2::Response into String (TypeError)
-
-    Parser.new(source, **(opts||{})).parse
-               ^^^^^^^^^^^^^^^^^^^^
-        from /data/data/com.termux/files/usr/lib/ruby/3.2.0/json/common.rb:216:in `new'
-        from /data/data/com.termux/files/usr/lib/ruby/3.2.0/json/common.rb:216:in `parse'
-        from get_locations.rb:18:in `<main>'
