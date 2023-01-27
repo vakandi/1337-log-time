@@ -3,6 +3,65 @@
 <head>
     <title>API call</title>
 </head>
+<style>
+body {
+    font-size: 30px;
+    background-color: black;
+    text-align: center;
+}
+
+form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 40px;
+    color: white;
+}
+
+input[type="text"] {
+    font-size: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    background-color: darkpurple;
+}
+
+pre {
+    font-size: 40px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+
+    pre {
+        width: 100%;
+    }
+}
+ 
+</style>
 <body>                                                                          <form action="index.php" method="post">
         <label for="login">Login:</label>
         <input type="text" id="login" name="login">
