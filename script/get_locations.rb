@@ -11,3 +11,23 @@ response.status
 
 response.parsed
 puts response.inspect
+
+require 'json'
+
+# Assuming the API output is stored in a variable called `api_output`
+api_output_json = JSON.parse(response)
+
+daily_hours = {}
+
+api_output_json.each do |date, time_string|
+    # Parse the time string into hours, minutes, and seconds
+    hours, minutes, seconds = time_string.split(':').map(&:to_i)
+    # Add the total number of hours for the day to the `daily_hours` hash
+    daily_hours[date] = hours + (minutes / 60.0) + (seconds / 3600.0)
+end
+
+# Print out the results
+daily_hours.each do |date, hours|
+    puts "#{date}: #{hours} hours"
+end
+
