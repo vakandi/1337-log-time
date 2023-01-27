@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby Script Calculator</title>
+</head>
+<body>
+  <h1>Ruby Script Calculator</h1>
+ <form id="form" method="post" action="calculate.php">
+    <input type="text" name="username" placeholder="Enter username">
+    <input type="submit" value="Calculate">
+</form>
+<div id="output"></div>
+<div id="loading"></div>
+ 
+  <script>
+<?php
+if (isset($_POST['username'])) {
+    $username = $_POST['username'];
+    $output = exec("ruby get_logtime.rb $username 2>&1", $result);
+    echo $output;
+}
+?>
+  </script>
+
+
+  <script>
+  
+  document.getElementById("form").onsubmit = function() {
+    document.getElementById("loading").innerHTML = "<img src='loading.gif'/>";
+    document.getElementById("output").innerHTML = "";
+};
+</script>
+</body>
+</html>
+

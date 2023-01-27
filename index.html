@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby Script Calculator</title>
+  <title>Login Page</title>
 </head>
 <body>
-  <h1>Ruby Script Calculator</h1>
-  <label for="input_field">Enter your input:</label>
-  <input type="text" id="input_field" placeholder="Enter your input here">
-  <button id="calculate_button" onclick="runScript()">Calculate</button>
-  <div id="loading_gif" style="display: none">
-    <img src="loading.gif" alt="Loading...">
-  </div>
+  <form>
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login">
+    <br><br>
+    <button type="button" onclick="runScript()">Calculate</button>
+  </form> 
+  <br>
   <div id="output"></div>
   <script>
-    function runScript() {
-      // Get the user input from the input field
-      var input = document.getElementById("input_field").value;
-      
-      // Show the loading gif
-      document.getElementById("loading_gif").style.display = "block";
-      
-      // Run the Ruby script with the user input as an argument
-      fetch("script/get_logtime.rb?input=" + input)
-        .then(response => response.text())
-        .then(data => {
-          // Hide the loading gif
-          document.getElementById("loading_gif").style.display = "none";
-          
-          // Display the output or error message
-          if (data.startsWith("Error")) {
-            document.getElementById("output").innerHTML = "Error: " + data;
-          } else {
-            document.getElementById("output").innerHTML = data;
-          }
-        });
-    }
+  const { spawn } = require('child_process');
+
+function runScript() {
+  var login = document.getElementById("login").value;
+  // Display a loading gif
+  document.getElementById("output").innerHTML = '<img src="loading.gif">';
+
+  // execute the ruby script
+  const rubyProcess = spawn('ruby', ['get_logtime.rb', login]);
+
+  // listen for output data
+  rubyProcess.stdout.on('data', (data) => {
+    document.getElementById("output").innerHTML = data.toString();
+  });
+  // listen for error data
+  rubyProcess.stderr.on('data', (data) => {
+    console.error(data.toString());
+  });
+  // listen for process close
+  rubyProcess.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+}
+
+
   </script>
 </body>
 </html>
