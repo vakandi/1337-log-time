@@ -10,7 +10,7 @@ response = token.get("/v2/users/" + ARGV[0] + "/locations_stats?begin_at=" + d.p
 response.status
 
 response.parsed
-puts response.inspect
+#puts response.inspect
 
 require 'json'
 
