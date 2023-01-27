@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <form>
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login">
+    <br><br>
+    <button type="button" onclick="runScript()">Calculate</button>
+  </form> 
+  <br>
+  <div id="output"></div>
+  <script>
+  const { spawn } = require('child_process');
+
+function runScript() {
+  var login = document.getElementById("login").value;
+  // Display a loading gif
+  document.getElementById("output").innerHTML = '<img src="loading.gif">';
+
+  // execute the ruby script
+  const rubyProcess = spawn('ruby', ['get_logtime.rb', login]);
+
+  // listen for output data
+  rubyProcess.stdout.on('data', (data) => {
+    document.getElementById("output").innerHTML = data.toString();
+  });
+  // listen for error data
+  rubyProcess.stderr.on('data', (data) => {
+    console.error(data.toString());
+  });
+  // listen for process close
+  rubyProcess.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+}
+
+
+  </script>
+</body>
+</html>
+
