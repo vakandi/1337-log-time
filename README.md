@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ### [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)<br>[170.187.190.44](http://170.180.190.44) <br>
 Code > index.php
+=======
+### [170.187.190.44](http://170.180.190.44) <br>
+Code > index.html
+>>>>>>> f592896 (update)
 ## Using the terminal to get logtime : 
 ### ruby script/get_logtime.rb "login"
 [![Build status](https://img.shields.io/github/languages/top/vakandi/1337-log-time?color=green&label=shell&logo=github)](https://github.com/vakandi/1337-log-ime/pulls)
