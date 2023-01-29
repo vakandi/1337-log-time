@@ -1,4 +1,4 @@
-### [170.187.190.44](http://170.180.190.44) <br>
+### [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)<br>[170.187.190.44](http://170.180.190.44) <br>
 Code > index.php
 ## Using the terminal to get logtime : 
 ### ruby script/get_logtime.rb "login"
