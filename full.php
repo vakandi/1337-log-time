@@ -106,7 +106,7 @@ try {                                                                           
     $user = $provider->getResourceOwner($accessToken);
     $currentDay = date('d');
     if($currentDay >= 29 && $currentDay <= 31) {
-    $date_final = date("Y-m") . '-28' . " to " . date('Y-m-d');
+    $date_final = date("Y-m") . '-28';
 } else {
     $date_final = date("Y-m", strtotime("-1 month")) . '-28';
 }
