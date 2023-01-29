@@ -1,7 +1,7 @@
 
-### [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)<br>[170.187.190.44](http://170.180.190.44) <br>
-ngrok temp url> https://a0f2-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io
-- Code > full.php
+- main url : [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)
+- ngrok url> https://a0f2-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io
+- source code > /full.php
 =======
 ## Using the terminal to get logtime : 
 ### ruby script/get_logtime.rb "login"
