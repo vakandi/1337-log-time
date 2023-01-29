@@ -15,6 +15,7 @@ body {
     background-size: cover;
     text-align: center;
     height:100vh;
+    overflow: hidden;
 }
 
 pre {
