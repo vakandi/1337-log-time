@@ -19,7 +19,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-    <title>API call</title>
+    <title>LogTime 1337 | vakandi</title>
 </head>
 <style>
     
