@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
     <title>API call</title>
 </head>
 <style>
-    
 body {
-    font-size: 50px;
-    background: url('background.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    font-size: 30px;
+    background-color: black;
     text-align: center;
-    height:100vh;
-}
-
-pre {
-    position: absolute;
-    bottom: 30%;
-    width: 100%;
-    text-align: center;
-    font-family: 'Anonymous Pro';
-    color: white;
-    font-size: 50px;
 }
 
 form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 70%;
     margin: 0 auto;
-    background-size: cover;
-    background-position: center;
 }
 
 label {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
-    font-family: 'Anonymous Pro';
 }
 
 input[type="text"] {
@@ -49,9 +25,6 @@ input[type="text"] {
     padding: 20px;
     margin-bottom: 20px;
     width: 100%;
-    border-radius: 15px;
-    margin-right: 15px;
-    font-family: 'Anonymous Pro';
 }
 
 input[type="submit"] {
@@ -61,22 +34,38 @@ input[type="submit"] {
     padding: 20px;
     width: 100%;
     cursor: pointer;
-    border-radius: 15px;
-    margin-left: 15px;
-    font-family: 'Anonymous Pro';
 }
 
 input[type="submit"]:active {
-    background-color: #6600cc;
+    background-color: darkpurple;
 }
 
+pre {
+    font-size: 40px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+
+    pre {
+        width: 100%;
+    }
+}
+ 
 </style>
-<body>
-<form action="index.php" method="post">
+<body>                                                                          <form action="index.php" method="post">
         <label for="login">Login:</label>
         <input type="text" id="login" name="login">
-<input type="submit" id="submit-button" value="Submit">
-</form>
+        <input type="submit" value="Submit">                                    </form>
                                                                             <?php
 if(isset($_POST["login"])) {
     require "vendor/autoload.php";
@@ -101,11 +90,8 @@ try {                                                                           
         $hours = (int) $time[0];
         $total_hours += $hours;
     }
-    //echo "Logtime for" . $date("m");
-    echo $_POST["login"] . "\n";
-    echo "Total hours: " . $total_hours . "h";
-    echo "</pre>";
-} catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+    echo "Total hours: " . $total_hours;
+    echo "</pre>";                                                          } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
     echo "Error: " . $e->getMessage();
 }
 }
