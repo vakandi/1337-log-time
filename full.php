@@ -90,7 +90,7 @@ input[type="submit"]:active {
 <form action="index.php" method="post">
         <label for="login">Login:</label>
         <input type="text" id="login" name="login">
-<input type="submit" id="submit-button" value="Submit">
+<input type="submit" id="submit-button" value="GET LOGTIME">
 </form>
                                                                             <?php
 if(isset($_POST["login"])) {
