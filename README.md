@@ -1,6 +1,6 @@
 
 ### [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)<br>[170.187.190.44](http://170.180.190.44) <br>
-ngrok temp URL=https://3ad9-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io"
+ngrok temp url=https://3ad9-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io>
 - Code > full.php
 =======
 ## Using the terminal to get logtime : 
