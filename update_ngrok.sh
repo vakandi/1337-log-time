@@ -3,16 +3,16 @@ var=1
 while true
 do
 	old_url="$(curl -s localhost:4040/api/tunnels | jq -r .tunnels\[0\].public_url)"
+	sleep 2s
 	if [ -z $old_url ]; then
 		pkill ngrok
 		sleep 5s
 		nohup ngrok http 80 &
 		sleep 4s
 		new_url="$(curl -s localhost:4040/api/tunnels | jq -r .tunnels\[0\].public_url)"
-		string="$(cat index.html)"
-		echo "$(echo $string | sed "s|\(URL=\).*\(\"\)|\1$new_url\2|")" > index.html
-		echo "$(echo $string | sed "s|\(URL=\).*\(\"\)|\1$new_url\2|")" > README.md
-		git add index.htmk
+		echo "$(cat index.html | sed "s|\(URL=\).*\(\"\)|\1$new_url\2|")" > index.html
+		echo "$(cat README.md | sed "s|\(URL=\).*\(\"\)|\1$new_url\2|")" > README.md
+		git add index.html
 		git commit -m "ngrok_newlink"
 		git push origin master
 	fi
