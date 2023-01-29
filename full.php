@@ -70,8 +70,22 @@ input[type="submit"]:active {
     background-color: #6600cc;
 }
 
+.title {
+    font-family: 'Anonymous Pro';
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.purple-link {
+    color: purple;
+    text-decoration: none;
+}
+
 </style>
 <body>
+<div class="title">1337 LOGTIME by <a href="https://github.com/vakandi" class="purple-link">wbousfir</a></div>
 <form action="index.php" method="post">
         <label for="login">Login:</label>
         <input type="text" id="login" name="login">
