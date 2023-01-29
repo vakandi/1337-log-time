@@ -1,3 +1,5 @@
+apt install composer
+composer require league/oauth2-client
 wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list
 apt update
