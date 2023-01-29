@@ -1,7 +1,4 @@
 #!/bin/sh
-var=1
-while true
-do
 	old_url="$(curl -s localhost:4040/api/tunnels | jq -r .tunnels\[0\].public_url)"
 	sleep 2s
 	if [ -z $old_url ]; then
@@ -19,6 +16,3 @@ do
 		git push origin main
 	fi
 	systemctl restart apache2
-	sleep 60s
-	var=$((var+1))
-done
