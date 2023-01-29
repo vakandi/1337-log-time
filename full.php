@@ -51,6 +51,7 @@ input[type="text"] {
     width: 100%;
     border-radius: 15px;
     margin-right: 15px;
+    margin-top: 20px;
     font-family: 'Anonymous Pro';
 }
 
