@@ -1,7 +1,7 @@
 
 - main url : [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)
 - ngrok url> https://a0f2-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io
-- source code > /full.php
+- source code of the website > /full.php
 =======
 ## Using the terminal to get logtime : 
 ### ruby script/get_logtime.rb "login"
@@ -29,4 +29,4 @@
 - gem install oauth2
 ## Change "UID" & "SECRET" inside .rb file by your own 42 api keys
 ### The script is preconfigured to calculated every day since 28th of the previous month
-### Compatible with Termux (android), MacOs, Linux and WSL (Linux Inside Windows)
+### Compatible with Termux (android), MacOs, Linux and WSL (Windows Subsystem Linux)
