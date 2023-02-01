@@ -22,7 +22,11 @@
     <title>LogTime 1337 | vakandi</title>
 </head>
 <style>
-    
+@media only screen and (min-width: 980px) {
+pre {
+bottom: 40%;
+}
+
 body {
     font-size: 50px;
     background: url('background.jpg') no-repeat center center fixed; 
