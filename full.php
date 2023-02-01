@@ -103,7 +103,7 @@ input[type="submit"]:active {
 }
 @media only screen and (min-width: 980px) {
 pre {
-bottom: 40%;
+bottom: 20%;
 }
 </style>
 <body>
