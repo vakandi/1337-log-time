@@ -22,10 +22,6 @@
     <title>LogTime 1337 | vakandi</title>
 </head>
 <style>
-@media only screen and (min-width: 980px) {
-pre {
-bottom: 40%;
-}
 
 body {
     font-size: 50px;
@@ -105,7 +101,10 @@ input[type="submit"]:active {
     color: purple;
     text-decoration: none;
 }
-
+@media only screen and (min-width: 980px) {
+pre {
+bottom: 40%;
+}
 </style>
 <body>
 <div class="title">1337 LOGTIME by <a href="https://github.com/vakandi" class="purple-link">wbousfir</a></div>
