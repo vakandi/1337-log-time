@@ -6,16 +6,7 @@
 ___________________
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 ## Using the terminal to get logtime : 
 ### ruby script/get_logtime.rb "login"
