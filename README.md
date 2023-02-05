@@ -3,7 +3,7 @@
 - ngrok url> https://a0f2-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io
 - source code of the website > /full.php
 <br>
-=======
+___________________
 <br>
 ## Using the terminal to get logtime : 
 ### ruby script/get_logtime.rb "login"
