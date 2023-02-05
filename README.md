@@ -1,7 +1,7 @@
 
 - main url : [https://vakandi.github.io/1337-log-time/](https://vakandi.github.io/1337-log-time/)
 - ngrok url> https://a0f2-2a01-7e01-00-f03c-93ff-fefd-788e.eu.ngrok.io
-- source code of the website > /full.php
+- source code of the website in /full.php
 <br>
 ___________________
 <br>
