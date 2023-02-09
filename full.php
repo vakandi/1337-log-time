@@ -210,10 +210,6 @@ try {                                                                           
         $total_hours += $hours;
     }
     //echo "Logtime for" . $date("m");
-    $file = fopen("history.txt", "a");
-    fwrite($file, $login . " ");
-    fwrite($file, $total_hours . "\n");
-    fclose($file);
     echo $_POST["login"] . "\n";
     echo "Total hours: " . $total_hours . "h";
     echo "</pre>";
@@ -221,6 +217,12 @@ try {                                                                           
     echo "Error: " . $e->getMessage();
 }
 }
+$username = $_POST["login"];
+$file = fopen("history.txt", "a");
+$txt = date("Y-m-d H:i:s") . " " . $username . $total_hours . "\n";
+fwrite($file, $txt);
+fclose($file);
+
 ?>
 
 <div class="github-repo"><a href="https://github.com/vakandi/1337-log-time" class="purple-link">GitHub Repo</a></div>
