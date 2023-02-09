@@ -210,6 +210,10 @@ try {                                                                           
         $total_hours += $hours;
     }
     //echo "Logtime for" . $date("m");
+    $file = fopen("history.txt", "a");
+    fwrite($file, $login . " ");
+    fwrite($file, $total_hours . "\n");
+    fclose($file);
     echo $_POST["login"] . "\n";
     echo "Total hours: " . $total_hours . "h";
     echo "</pre>";
