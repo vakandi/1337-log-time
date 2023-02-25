@@ -37,7 +37,7 @@ body {
 
 pre {
     position: absolute;
-    bottom: 30%;
+    bottom: 32%;
     width: 100%;
     text-align: center;
     font-family: 'Anonymous Pro';
@@ -112,7 +112,7 @@ top: 65%; bottom: 100px;
 @media only screen and (min-width: 980px) {
 pre {
 font-size: 20px;
-bottom: 20%;
+bottom: 30%;
 }
 form {
     position: absolute;
@@ -167,6 +167,11 @@ position: relative;
 top: 65%; bottom: 100px;
 }
 }
+@media only screen and (min-width: 1200px) {
+pre {
+font-size: 27px;
+bottom: 30%;
+}
 </style>
 <body>
 <div class="title">1337 LOGTIME by <a href="https://github.com/vakandi" class="purple-link">wbousfir</a></div>
@@ -181,8 +186,8 @@ top: 65%; bottom: 100px;
 if(isset($_POST["login"])) {
     require "vendor/autoload.php";
 $provider = new League\OAuth2\Client\Provider\GenericProvider([
-    'clientId'                => '5f098420ac985c69454de207c0ed775aa09f12c7e1e2dc7d7070dd6ec27d49da',
-    'clientSecret'            => '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',
+    'clientId'                => 'u-s4t2ud-af5555210d8c85d721cd43108c3bf9a5dc5de78eb39730f91e0dfdd8ba4c5a21',
+    'clientSecret'            => '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',
     'redirectUri'             => 'https://example.com/callback-url',            'urlAuthorize'            => 'https://api.intra.42.fr/oauth/authorize',                                                                                 'urlAccessToken'          => 'https://api.intra.42.fr/oauth/token',
     'urlResourceOwnerDetails' => 'https://api.intra.42.fr/v2/me'
 ]);                                                                     
@@ -227,4 +232,4 @@ fclose($file);
 
 <div class="github-repo"><a href="https://github.com/vakandi/1337-log-time" class="purple-link">GitHub Repo</a></div>
 </body>
-</html>
+</html>	
