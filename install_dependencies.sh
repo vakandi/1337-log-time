@@ -1,3 +1,4 @@
+echo "This will install dependencies for using the web version of the logtime, using php as a server and ngrok as a free domain provider"
 apt install composer
 composer require league/oauth2-client
 wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -

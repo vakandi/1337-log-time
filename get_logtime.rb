@@ -1,6 +1,6 @@
 require "oauth2"
-UID= "5f098420ac985c69454de207c0ed775aa09f12c7e1e2dc7d7070dd6ec27d49da"
-SECRET= "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" #SECRET KEY HERE
+UID= "**********"
+SECRET= "s-s***********" #SECRET KEY HERE
 client = OAuth2::Client.new(UID, SECRET, site: "https://api.intra.42.fr")
 token = client.client_credentials.get_token
 require 'date'
@@ -33,5 +33,6 @@ daily_hours.each do |date, hours|
     minutes = (hours - hours.to_i) * 60
    # puts "#{date}: #{hours.to_i} hours and #{minutes.to_i} minutes"
 end
-puts "Total hours: #{total_hours.to_i} h"
+puts "\033[1;42m" + "  Total :[ #{total_hours.to_i} h ] " + "\033[0m"
+puts "\033[1;32m" + "Average hours: #{(total_hours.to_i / daily_hours.length).to_i} h" + "\033[0m"
 
