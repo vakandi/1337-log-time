@@ -199,7 +199,7 @@ def number_to_ascii(number)
 end
 
 # Modified output lines using ASCII art
-puts "\033[1;42m"
+puts "\033[1;32m"
 puts "Total hours:"
 #print 'h' next to the number and not below it, so on the same line
 #puts number_to_ascii(total_hours.to_i)
